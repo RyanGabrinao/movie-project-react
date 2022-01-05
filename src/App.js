@@ -1,7 +1,8 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 //Components
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+//Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Fave from "./pages/Fave";
