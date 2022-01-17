@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer>FWDP COPYRIGHT</footer>
+      <footer>&copy; FWDP COPYRIGHT</footer>
     </>
   );
 }
