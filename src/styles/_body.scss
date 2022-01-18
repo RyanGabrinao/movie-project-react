@@ -1,4 +1,9 @@
 body {
-  background-color: $dark-400;
+  background: rgb(58, 35, 72);
+  background: radial-gradient(circle, rgb(58, 35, 72) 0%, rgb(21, 20, 20) 100%);
+  background-repeat: no-repeat;
   color: $textColor;
+
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
 }

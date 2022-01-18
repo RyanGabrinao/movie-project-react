@@ -26,9 +26,13 @@
   gap: em(72);
 }
 .stacked {
-  display: grid;
+  @include mq($tablet) {
+    display: grid;
+  }
 }
 .stacked > * {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  @include mq($tablet) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 }
