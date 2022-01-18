@@ -10,30 +10,18 @@
 .justify-between {
   justify-content: space-between;
 }
-.grid {
-  display: grid;
+.justify-evenly {
+  justify-content: space-evenly;
 }
-.margin-center {
-  margin: 0 auto;
+.gap-sm {
+  gap: em(16);
 }
-.fill {
-  width: 100%;
-  height: 100%;
+.gap-md {
+  gap: em(40);
 }
-.gap-half {
-  gap: 0.5rem;
+.gap-lg {
+  gap: em(56);
 }
-.gap-1 {
-  gap: 1rem;
+.gap-xl {
+  gap: em(72);
 }
-.gap-2 {
-  gap: 2rem;
-}
-// .card {
-// }
-// .btn {
-// }
-// .btn-primary {
-// }
-// .btn-secondary {
-// }

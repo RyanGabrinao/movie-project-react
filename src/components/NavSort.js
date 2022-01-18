@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavSort() {
   return (
     <nav className="sort-navigation">
-      <ul>
+      <ul className="flex justify-center align-center">
         <li>
           <Link to="/sort/popular">Popular</Link>
         </li>
