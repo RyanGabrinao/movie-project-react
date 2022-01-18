@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavMain() {
   return (
     <nav>
-      <ul>
+      <ul className="flex">
         <li>
           <Link to="/">Home</Link>
         </li>

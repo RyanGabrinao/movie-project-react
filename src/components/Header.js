@@ -3,7 +3,7 @@ import NavMain from "./NavMain";
 
 function Header() {
   return (
-    <header>
+    <header className="flex justify-between">
       <div>Logo</div>
       <NavMain />
     </header>

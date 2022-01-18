@@ -1,0 +1,19 @@
+.movies-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(em(220), 1fr));
+
+  .movie-card {
+    width: fit-content;
+  }
+
+  .movie-poster {
+    width: fit-content;
+
+    img {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+    }
+  }
+}
