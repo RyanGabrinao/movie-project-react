@@ -25,3 +25,10 @@
 .gap-xl {
   gap: em(72);
 }
+.stacked {
+  display: grid;
+}
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}

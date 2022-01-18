@@ -3,7 +3,7 @@ import noPoster from "../images/no-movie-poster.jpg";
 
 function MovieCard({ movie }) {
   return (
-    <div className="movie-card">
+    <div className="movie-card stacked">
       <div className="movie-poster">
         {movie.poster_path !== null ? (
           <img
