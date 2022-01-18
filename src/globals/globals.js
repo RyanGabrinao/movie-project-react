@@ -1,0 +1,3 @@
+export const API_KEY = "28da17fc038f3403752a1045fce87cef";
+export const API_TOKEN =
+  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOGRhMTdmYzAzOGYzNDAzNzUyYTEwNDVmY2U4N2NlZiIsInN1YiI6IjYxZTViZGY2ZGI4YTAwMDA5MzUxMGFiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.f-_zPL1XDwsSbG-On4Fxov0l3ViutbjMfSgN-JmjHmc";
