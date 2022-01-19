@@ -10,8 +10,10 @@ import NotFound from "./pages/NotFound";
 import Single from "./pages/Single";
 
 function App() {
+  // Custom CSS Height Fix for mobile devicesa
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
+
   return (
     <div className="wrapper">
       <Header />

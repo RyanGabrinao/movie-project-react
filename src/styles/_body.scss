@@ -3,5 +3,6 @@ body {
   background: radial-gradient(circle, rgb(58, 35, 72) 0%, rgb(21, 20, 20) 100%);
   background-repeat: no-repeat;
   color: $textColor;
-  min-height: calc(var(--vh, 1vh) * 100);
+  // min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
 }
