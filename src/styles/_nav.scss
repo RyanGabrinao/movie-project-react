@@ -1,4 +1,11 @@
 // Main Nav
+.main-nav {
+  display: none;
+
+  @include mq($tablet) {
+    display: block;
+  }
+}
 
 // Sort Nav
 .sort-navigation {

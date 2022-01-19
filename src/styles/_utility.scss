@@ -26,12 +26,12 @@
   gap: em(72);
 }
 .stacked {
-  @include mq($tablet) {
+  @include mq($desktop) {
     display: grid;
   }
 }
 .stacked > * {
-  @include mq($tablet) {
+  @include mq($desktop) {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
