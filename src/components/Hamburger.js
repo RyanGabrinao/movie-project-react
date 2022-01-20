@@ -10,7 +10,7 @@ function Hamburger() {
         setIsOpen(!isOpen);
       }}
     >
-      <div class={isOpen ? "hamburger animate" : "hamburger"}></div>
+      <div className={isOpen ? "hamburger animate" : "hamburger"}></div>
     </button>
   );
 }

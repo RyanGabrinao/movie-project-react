@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
-function LikeButton() {
-  const [isLiked, setIsLiked] = useState(false);
+function LikeButton({ isLiked, onLike }) {
+  // const [isLiked, setIsLiked] = useStickyState(false, "liked");
+
   return (
     <motion.button
       className="like-button flex justify-center align-center"
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
-      onClick={() => setIsLiked(!isLiked)}
+      onClick={() => onLike()}
     >
       {isLiked ? <HeartFilled /> : <HeartEmpty />}
     </motion.button>
