@@ -54,7 +54,7 @@ function Single() {
     <>
       <main>
         {movie !== null && (
-          <section>
+          <section className="single">
             <h2>{movie.title}</h2>
             <motion.div
               className="movie-poster"
@@ -66,8 +66,8 @@ function Single() {
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt=""
               />
+              <LikeButton onLike={onLikeFn} isLiked={isLiked} />
             </motion.div>
-            <LikeButton onLike={onLikeFn} isLiked={isLiked} />
           </section>
         )}
       </main>

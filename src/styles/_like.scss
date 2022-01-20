@@ -1,8 +1,10 @@
 .like-button {
-  width: em(50);
-  height: em(50);
+  width: $text-xxl;
+  height: $text-xxl;
   overflow: hidden;
-  position: relative; //need for icons stack
+  position: absolute; //need for icons stack
+  top: 0;
+  right: 0;
   color: gray; //default color
   cursor: pointer;
   border: none; //clear border
