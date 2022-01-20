@@ -8,11 +8,11 @@ import LikeButton from "../components/LikeButton";
 // Animations
 const posterVar = {
   init: {
-    y: 200,
+    x: -200,
     opacity: 0,
   },
   show: {
-    y: 0,
+    x: 0,
     opacity: 1,
     transition: {
       ease: [0.6, 0.01, -0.05, 0.95],
@@ -21,18 +21,20 @@ const posterVar = {
   },
 };
 
-const imageVar = {
-  init: {
-    scale: 1.5,
-  },
-  show: {
-    scale: 1,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1.4,
-    },
-  },
-};
+// const imageVar = {
+//   // init: {
+//   //   x: -200,
+//   //   opacity: 0,
+//   // },
+//   // show: {
+//   //   x: 0,
+//   //   opacity: 1,
+//   //   transition: {
+//   //     ease: [0.6, 0.01, -0.05, 0.95],
+//   //     duration: 1.4,
+//   //   },
+//   // },
+// };
 
 function Single() {
   const { id } = useParams();
@@ -49,7 +51,6 @@ function Single() {
         movieDataFromAPI.isLiked = false;
         setMovie(movieDataFromAPI);
       } else {
-        console.log(movie);
         setIsLiked(movie.isLiked);
       }
     };
@@ -62,7 +63,6 @@ function Single() {
     updatedMovie.isLiked = !updatedMovie.isLiked;
     setMovie(updatedMovie);
     setIsLiked(updatedMovie.isLiked);
-    console.log(updatedMovie);
   };
 
   return (
@@ -78,7 +78,6 @@ function Single() {
               animate="show"
             >
               <motion.img
-                variants={imageVar}
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt=""
               />

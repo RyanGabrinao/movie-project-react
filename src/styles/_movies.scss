@@ -82,3 +82,15 @@
     }
   }
 }
+
+.favorites {
+  .movies-container {
+    display: grid;
+    @include mq($desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include mq($desktopWide) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
