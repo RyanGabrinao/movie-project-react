@@ -2,8 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function LikeButton({ isLiked, onLike }) {
-  // const [isLiked, setIsLiked] = useStickyState(false, "liked");
-
   return (
     <motion.button
       className="like-button flex justify-center align-center"
