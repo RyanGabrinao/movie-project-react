@@ -1,13 +1,22 @@
 //Nav
 body {
-    font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Roboto', sans-serif;
-    font-size: $text-xl;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: $text-xl;
 }
 
 .movie-title {
-    font-size: $text-xxs;
+  font-size: $text-xxs;
+
+  &.single-page {
+    font-size: $text-xl;
+  }
 }

@@ -55,7 +55,6 @@ function Single() {
       <main>
         {movie !== null && (
           <section className="single">
-            <h2>{movie.title}</h2>
             <motion.div
               className="movie-poster"
               variants={posterVar}
@@ -68,6 +67,9 @@ function Single() {
               />
               <LikeButton onLike={onLikeFn} isLiked={isLiked} />
             </motion.div>
+            <div className="movie-details">
+              <h2 className="movie-title single-page">{movie.title}</h2>
+            </div>
           </section>
         )}
       </main>
