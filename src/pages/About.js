@@ -3,7 +3,9 @@ import React from "react";
 function About() {
   return (
     <main>
-      <h2>About</h2>
+      <div className="about">
+        <h2>About</h2>
+      </div>
     </main>
   );
 }
