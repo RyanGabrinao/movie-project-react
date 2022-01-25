@@ -58,6 +58,7 @@
 
   .movie-poster {
     width: fit-content;
+    position: relative;
 
     img {
       display: block;
@@ -65,10 +66,20 @@
       aspect-ratio: 2 / 3;
       object-fit: cover;
     }
+
+    .rating-container {
+      position: absolute;
+      width: em(50);
+      bottom: 0;
+      right: 0;
+      margin: em(5);
+    }
   }
 
   .movie-info {
-    // background-color: purple;
+    background: rgba(250, 250, 250, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding-inline: 1rem;
     align-self: start;
     height: em(110);

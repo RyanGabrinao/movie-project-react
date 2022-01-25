@@ -51,29 +51,27 @@ function Single() {
   };
 
   return (
-    <>
-      <main>
-        {movie !== null && (
-          <section className="single">
-            <motion.div
-              className="movie-poster"
-              variants={posterVar}
-              initial="init"
-              animate="show"
-            >
-              <motion.img
-                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                alt=""
-              />
-              <LikeButton onLike={onLikeFn} isLiked={isLiked} />
-            </motion.div>
-            <div className="movie-details">
-              <h2 className="movie-title single-page">{movie.title}</h2>
-            </div>
-          </section>
-        )}
-      </main>
-    </>
+    <main>
+      {movie !== null && (
+        <section className="single">
+          <motion.div
+            className="movie-poster"
+            variants={posterVar}
+            initial="init"
+            animate="show"
+          >
+            <motion.img
+              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              alt=""
+            />
+            <LikeButton onLike={onLikeFn} isLiked={isLiked} />
+          </motion.div>
+          <div className="movie-details">
+            <h2 className="movie-title single-page">{movie.title}</h2>
+          </div>
+        </section>
+      )}
+    </main>
   );
 }
 

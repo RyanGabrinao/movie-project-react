@@ -14,9 +14,30 @@ h6 {
 }
 
 .movie-title {
-  font-size: $text-xxs;
+  font-size: $text-sm;
+  @include mq($tablet) {
+    font-size: $text-xxs;
+  }
+
+  @include mq($desktop) {
+    font-size: $text-xxxs;
+  }
 
   &.single-page {
     font-size: $text-xl;
+  }
+}
+
+.rating-container {
+  .rating {
+    .CircularProgressbar-text {
+      font-size: $text-xl;
+      @include mq($tablet) {
+        font-size: $text-lg;
+      }
+      @include mq($desktop) {
+        font-size: $text-md;
+      }
+    }
   }
 }

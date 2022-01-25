@@ -17,12 +17,10 @@ function Home({ sort }) {
     fetchMovies();
   }, [sort]);
   return (
-    <>
-      <main>
-        <NavSort />
-        {moviesData !== null && <Movies moviesData={moviesData} />}
-      </main>
-    </>
+    <main>
+      <NavSort />
+      {moviesData !== null && <Movies moviesData={moviesData} />}
+    </main>
   );
 }
 
