@@ -35,3 +35,10 @@ table {
 textarea {
   white-space: revert;
 }
+article {
+  width: fit-content;
+  justify-self: center;
+  @include mq($desktop) {
+    justify-self: self-start;
+  }
+}

@@ -1,13 +1,14 @@
 .wrapper {
-  max-width: em(1400);
-  margin: 0 auto;
-  padding-inline: em(20);
+  // padding-inline: em(20);
   display: flex;
   flex-direction: column;
   // overflow: hidden;
   min-height: 100vh;
 
   main {
+    // max-width: em(1400);
+    // margin: 0 auto;
+    // width: 100%;
     flex-grow: 1;
   }
 }

@@ -4,6 +4,7 @@ import { API_KEY } from "../globals/globals";
 import useStickyState from "../hooks/useStickyState";
 import { motion } from "framer-motion";
 import LikeButton from "../components/LikeButton";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 // Animations
 const posterVar = {
@@ -25,6 +26,7 @@ function Single() {
   const { id } = useParams();
   const [movie, setMovie] = useStickyState(null, `movie-${id}`);
   const [isLiked, setIsLiked] = useState(false);
+  const { height, width } = useWindowDimensions();
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -54,20 +56,32 @@ function Single() {
     <main>
       {movie !== null && (
         <section className="single">
-          <motion.div
-            className="movie-poster"
-            variants={posterVar}
-            initial="init"
-            animate="show"
-          >
-            <motion.img
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-              alt=""
-            />
-            <LikeButton onLike={onLikeFn} isLiked={isLiked} />
-          </motion.div>
-          <div className="movie-details">
-            <h2 className="movie-title single-page">{movie.title}</h2>
+          <div className="banner">
+            <div
+              className="backdrop-img"
+              style={
+                width >= 600
+                  ? {
+                      backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie.backdrop_path}")`,
+                    }
+                  : { backgroundImage: "none" }
+              }
+            ></div>
+            <motion.div
+              className="movie-poster"
+              variants={posterVar}
+              initial="init"
+              animate="show"
+            >
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                alt=""
+              />
+              <LikeButton onLike={onLikeFn} isLiked={isLiked} />
+            </motion.div>
+            <div className="movie-details">
+              <h2 className="movie-title single-page">{movie.title}</h2>
+            </div>
           </div>
         </section>
       )}
