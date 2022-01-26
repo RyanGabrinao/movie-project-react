@@ -1,6 +1,36 @@
 .single {
-  .movie-poster {
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
     position: relative;
-    width: fit-content;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    .backdrop-img {
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top;
+      filter: brightness(60%) blur(em(3.5));
+      mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0)
+      );
+    }
+    .movie-poster {
+      position: relative;
+      width: fit-content;
+      max-width: em(300);
+      margin: 0 auto;
+    }
+    .movie-details {
+      z-index: 0;
+    }
   }
 }

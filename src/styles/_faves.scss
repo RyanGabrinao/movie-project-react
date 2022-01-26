@@ -1,2 +1,26 @@
 .favorites {
+  max-width: em(1440);
+  padding-inline: em(20);
+  margin: 0 auto;
+  .movies-container {
+    padding-inline: unset;
+    .movie-card {
+      max-width: em(250);
+      @include mq($tablet) {
+        max-width: unset;
+      }
+    }
+    @include mq(em(436)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq($tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq($desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include mq($desktopWide) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
 }

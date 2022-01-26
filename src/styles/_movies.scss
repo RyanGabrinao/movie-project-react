@@ -7,8 +7,8 @@
 
   @include mq(436) {
     grid-template-columns: repeat(auto-fit, minmax(em(190), 1fr));
-    max-width: unset;
-    margin: unset;
+    max-width: em(1440);
+    padding-inline: em(20);
   }
 
   .movie-card {
@@ -90,18 +90,6 @@
 
     span {
       display: inline-block;
-    }
-  }
-}
-
-.favorites {
-  .movies-container {
-    display: grid;
-    @include mq($desktop) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-    @include mq($desktopWide) {
-      grid-template-columns: repeat(5, 1fr);
     }
   }
 }
