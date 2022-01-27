@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 import noPoster from "../images/no-movie-poster.jpg";
 import Rating from "./Rating";
 
+const dateFormat = (date) => {
+  let fDate = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return new Date(date).toLocaleDateString([], fDate);
+};
+
 function MovieCard({ movie }) {
   return (
     <article>
@@ -21,10 +30,10 @@ function MovieCard({ movie }) {
               <Rating movie={movie} />
             </div>
           </div>
-          <div className="movie-info flex justify-between align-center gap-md">
-            <div className="left-info">
+          <div className="movie-info">
+            <div className="info">
               <h2 className="movie-title">{movie.title}</h2>
-              <span>{movie.release_date}</span>
+              <span className="date">{dateFormat(movie.release_date)}</span>
             </div>
           </div>
         </div>

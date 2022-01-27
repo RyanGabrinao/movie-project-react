@@ -2,6 +2,7 @@
   position: relative;
   width: fit-content;
   height: em(35);
+  z-index: 100;
 
   .hamburger,
   .hamburger::after,
@@ -57,4 +58,34 @@
   @include mq($tablet) {
     display: none;
   }
+}
+
+.mobileNav {
+  @include mq($tablet) {
+    display: none;
+  }
+
+  .hamburgerBtn {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+  }
+  .mobileNavLinks {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    background-color: rgb(24, 23, 23);
+    z-index: 999;
+  }
+
+  .mobileNavLinks li {
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+  }
+
+  // .mobileNavLinks li:hover {
+  //   color: #9615db;
+  // }
 }

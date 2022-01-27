@@ -2,25 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../globals/globals";
 import useStickyState from "../hooks/useStickyState";
-import { motion } from "framer-motion";
-import LikeButton from "../components/LikeButton";
 import useWindowDimensions from "../hooks/useWindowDimensions";
-
-// Animations
-const posterVar = {
-  init: {
-    x: -200,
-    opacity: 0,
-  },
-  show: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1.4,
-    },
-  },
-};
+import Banner from "../components/Banner";
+import Cast from "../components/Cast";
 
 function Single() {
   const { id } = useParams();
@@ -55,35 +39,23 @@ function Single() {
   return (
     <main>
       {movie !== null && (
-        <section className="single">
-          <div className="banner">
-            <div
-              className="backdrop-img"
-              style={
-                width >= 600
-                  ? {
-                      backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie.backdrop_path}")`,
-                    }
-                  : { backgroundImage: "none" }
-              }
-            ></div>
-            <motion.div
-              className="movie-poster"
-              variants={posterVar}
-              initial="init"
-              animate="show"
-            >
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                alt=""
-              />
-              <LikeButton onLike={onLikeFn} isLiked={isLiked} />
-            </motion.div>
-            <div className="movie-details">
-              <h2 className="movie-title single-page">{movie.title}</h2>
+        <>
+          <section className="single-banner">
+            <Banner
+              movie={movie}
+              width={width}
+              onLikeFn={onLikeFn}
+              isLiked={isLiked}
+            />
+          </section>
+          <section className="more-details">
+            <div className="overview-container">
+              <h3 className="overview-title header">Overview</h3>
+              <p className="overview content">{movie.overview}</p>
             </div>
-          </div>
-        </section>
+            <Cast id={id} />
+          </section>
+        </>
       )}
     </main>
   );

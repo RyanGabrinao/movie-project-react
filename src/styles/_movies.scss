@@ -79,17 +79,16 @@
   .movie-info {
     background: rgba(250, 250, 250, 0);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     padding-inline: 1rem;
-    align-self: start;
-    height: em(110);
-
-    & > * {
-      width: fit-content;
-    }
-
-    span {
-      display: inline-block;
+    height: em(100);
+    .info {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      height: 100%;
+      padding: em(15) em(5);
+      & > * {
+        align-self: center;
+      }
     }
   }
 }

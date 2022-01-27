@@ -1,6 +1,6 @@
 .like-button {
-  width: $text-xxl;
-  height: $text-xxl;
+  width: em(35);
+  height: em(35);
   overflow: hidden;
   position: absolute; //need for icons stack
   top: 0;

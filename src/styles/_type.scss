@@ -1,6 +1,7 @@
 //Nav
 body {
   font-family: "Questrial", sans-serif;
+  line-height: 1.6667;
 }
 
 h1,
@@ -24,7 +25,7 @@ h6 {
   }
 
   &.single-page {
-    font-size: $text-xl;
+    font-size: $text-lg;
   }
 }
 
@@ -38,6 +39,48 @@ h6 {
       @include mq($desktop) {
         font-size: $text-md;
       }
+    }
+  }
+}
+
+// SINGLES PAGE
+.single-banner {
+  .banner {
+    .movie-details {
+      .movie-title {
+        font-size: $text-xxl;
+      }
+      .tagline {
+      }
+      .genre-container {
+        font-size: $text-xxs;
+        @include mq($desktop) {
+          font-size: $text-xxxs;
+        }
+      }
+      .third-row {
+        .release-date {
+        }
+        .runtime {
+        }
+        .rating {
+        }
+      }
+    }
+  }
+}
+
+.more-details {
+  .header {
+    font-size: $text-lg;
+  }
+  .content {
+    font-size: $text-sm;
+    @include mq($tablet) {
+      font-size: $text-xs;
+    }
+    @include mq($desktop) {
+      font-size: $text-xxs;
     }
   }
 }

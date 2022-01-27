@@ -1,0 +1,24 @@
+.cast-container {
+  .cast-scroll-container {
+    display: flex;
+    overflow-y: hidden;
+    // overflow-x: scroll;
+    // max-width: em(500);
+    border: 1px solid red;
+    // list-style-type: none;
+    // list-style-position: inside;
+    .cast-card {
+      width: fit-content;
+      display: flex;
+
+      flex-direction: column;
+      // height: em(100);
+      background-color: lightgreen;
+      border: 1px solid blue;
+      // overflow-x: hidden;
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
