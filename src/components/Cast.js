@@ -20,14 +20,16 @@ function Cast({ id }) {
   return (
     <>
       {cast !== null && (
-        <div className="cast-container">
-          <h2>Cast</h2>
-          <div className="cast-scroll-container">
-            {cast.map((cast, i) => (
-              <CastCard cast={cast} key={i} />
-            ))}
+        <>
+          <div className="cast-container">
+            <h2>Cast</h2>
+            <div className="cast-scroll-container">
+              {cast.map((cast, i) => (
+                <CastCard cast={cast} key={i} />
+              ))}
+            </div>
           </div>
-        </div>
+        </>
       )}
     </>
   );
