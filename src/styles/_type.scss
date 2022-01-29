@@ -84,3 +84,14 @@ h6 {
     }
   }
 }
+
+.cast-container {
+  .cast-scroll-container {
+    p {
+      font-size: em(12);
+    }
+    .cast-name {
+      font-size: em(14);
+    }
+  }
+}
