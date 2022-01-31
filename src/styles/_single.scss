@@ -26,14 +26,24 @@
 
     .banner-content {
       width: 100%;
-      max-width: em(1440);
+      max-width: em(1000);
       padding: em(30) em(20);
       margin: 0 auto;
+      @include mq($desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: em(30);
+        padding: em(100) em(50);
+      }
       .movie-poster {
         position: relative;
         width: fit-content;
         max-width: em(220);
         margin: 0 auto;
+        @include mq($desktop) {
+          margin: unset;
+        }
       }
       .movie-details {
         z-index: 0;
@@ -42,6 +52,9 @@
         display: flex;
         flex-direction: column;
         gap: em(8);
+        @include mq($desktop) {
+          margin: unset;
+        }
         span {
           vertical-align: middle;
         }

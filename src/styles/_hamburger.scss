@@ -72,11 +72,11 @@
   }
   .mobileNavLinks {
     position: absolute;
-    top: 50px;
+    top: 0px;
     right: 0;
     width: 100%;
     background-color: rgb(24, 23, 23);
-    z-index: 999;
+    z-index: 50;
   }
 
   .mobileNavLinks li {

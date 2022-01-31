@@ -16,7 +16,7 @@ function Single() {
     const fetchMovie = async () => {
       if (movie === null) {
         const res = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
+          `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos`
         );
         const movieDataFromAPI = await res.json();
         movieDataFromAPI.isLiked = false;
@@ -26,6 +26,8 @@ function Single() {
       }
     };
     fetchMovie();
+
+    // console.log(movie);
   }, [id, movie, setMovie]);
 
   const onLikeFn = () => {

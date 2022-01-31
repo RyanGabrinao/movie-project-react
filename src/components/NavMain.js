@@ -6,13 +6,19 @@ function NavMain() {
     <nav className="main-nav">
       <ul className="flex">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <span className="main-link">Home</span>
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">
+            <span className="main-link">About</span>
+          </Link>
         </li>
         <li>
-          <Link to="/favourites">Favourites</Link>
+          <Link to="/favourites">
+            <span className="main-link">Favorites</span>
+          </Link>
         </li>
       </ul>
     </nav>

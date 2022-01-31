@@ -4,10 +4,56 @@
 
   @include mq($tablet) {
     display: block;
+
+    .flex li {
+      margin: 0 1.5rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .flex li a {
+      color: #b64dee;
+    }
+    .flex li a:hover {
+      font-size: 1.4rem;
+      text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #b64dee, 0 0 20px #b64dee,
+        0 0 25px #b64dee, 0 0 30px #b64dee, 0 0 35px #b64dee;
+    }
   }
 }
 
 // Sort Nav
 .sort-navigation {
   margin-block: em(30);
+  ul {
+    display: none;
+    margin-top: em(10);
+    &.show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: em(10);
+    }
+    @include mq($tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: em(20);
+    }
+  }
+  .sort-by-container {
+    gap: em(5);
+    width: fit-content;
+    margin-inline: auto;
+    @include mq($tablet) {
+      display: none;
+    }
+    .sort-by {
+    }
+    .svg-inline--fa {
+      width: em(15);
+    }
+  }
 }

@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import ChevronDown from "./ChevronDown";
+import ChevronUp from "./ChevronUp";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 import { NavLink } from "react-router-dom";
 
 function NavSort() {
+  const [isSortOpen, setIsSortOpen] = useState(false);
+  const { height, width } = useWindowDimensions();
   return (
     <nav className="sort-navigation">
-      <ul className="flex justify-center align-center">
+      <div
+        className="sort-by-container flex align-center"
+        onClick={() => setIsSortOpen(!isSortOpen)}
+      >
+        <span className="sort-by">Sort By</span>
+        {isSortOpen ? <ChevronUp /> : <ChevronDown />}
+      </div>
+      <ul className={isSortOpen && width <= 600 ? "show" : null}>
         <li>
           <NavLink
             to="/sort/popular"

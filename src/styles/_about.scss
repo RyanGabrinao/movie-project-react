@@ -1,2 +1,52 @@
 .about {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .attributeLogo {
+    margin: 0 auto;
+    height: 60px;
+    width: 60px;
+  }
+
+  .attribute {
+    margin-top: 3rem;
+  }
+  .description h4 {
+    margin: 1rem;
+  }
+
+  .description {
+    width: 80%;
+    border: 3px solid #b64dee;
+    border-radius: 50px;
+    padding: 2rem;
+    // box-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #B64DEE, 0 0 20px #B64DEE, 0 0 25px #B64DEE, 0 0 30px #B64DEE, 0 0 35px #B64DEE;
+  }
+
+  .attribute {
+    font-style: italic;
+    font-size: 1rem;
+    border: 3px solid white;
+    border-radius: 50px;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  .attributeLogo {
+    margin: 0 auto;
+    height: 60px;
+    width: 60px;
+  }
+
+  @include mq($tablet) {
+    .attribute {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+    }
+  }
 }

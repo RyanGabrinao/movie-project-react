@@ -11,9 +11,7 @@ function Cast({ id }) {
       );
       let castData = await res.json();
       castData = castData.cast.splice(0, 15);
-      console.log(castData);
       setCast(castData);
-      console.log(castData);
     };
     fetchCast();
   }, [id]);

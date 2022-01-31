@@ -5,3 +5,7 @@ body {
   color: $textColor;
   min-height: 100vh;
 }
+
+section {
+  margin-block: em(50);
+}
