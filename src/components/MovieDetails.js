@@ -11,8 +11,15 @@ function MovieDetails({ movie }) {
   };
   return (
     <div className="movie-details">
-      <h1 className="movie-title single-page">{movie.title}</h1>
-      <p className="tagline">{movie.tagline}</p>
+      <div>
+        <h1 className="movie-title single-page neon">{movie.title}</h1>
+        <p className="tagline">{movie.tagline}</p>
+      </div>
+
+      <div className="overview-container">
+        <h3 className="overview-title heading neon">Overview</h3>
+        <p className="overview content">{movie.overview}</p>
+      </div>
       <span className="genre-container second-row">
         {movie.genres.map((genres) => (
           <span className="genre" key={genres.id}>

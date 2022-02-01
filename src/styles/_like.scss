@@ -1,15 +1,16 @@
 .like-button {
-  width: em(35);
-  height: em(35);
+  width: em(40);
+  height: em(40);
   overflow: hidden;
   position: absolute; //need for icons stack
-  top: 0;
-  right: 0;
+  top: -10px;
+  right: -10px;
   color: gray; //default color
   cursor: pointer;
   border: none; //clear border
   background-color: #fff; //clear background
   border-radius: 50%;
+  box-shadow: 0px 5px 18px 4px #000000;
   & > * {
     fill: #e2264d;
     margin: 0.5rem;

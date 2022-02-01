@@ -23,7 +23,7 @@ function Hamburger() {
                 setIsOpen(!isOpen);
               }}
             >
-              Home
+              HOME
             </Link>
           </li>
           <li>
@@ -33,7 +33,7 @@ function Hamburger() {
                 setIsOpen(!isOpen);
               }}
             >
-              About
+              ABOUT
             </Link>
           </li>
           <li>
@@ -43,7 +43,7 @@ function Hamburger() {
                 setIsOpen(!isOpen);
               }}
             >
-              Favourites
+              FAVOURITES
             </Link>
           </li>
         </ul>

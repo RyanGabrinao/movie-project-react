@@ -1,6 +1,7 @@
 body {
-  font-family: "Questrial", sans-serif;
+  font-family: "Zen Kurenaido", sans-serif;
   line-height: 1.6667;
+  letter-spacing: em(1);
 }
 
 h1,
@@ -9,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Audiowide", cursive;
   font-size: $text-xl;
 }
 
@@ -18,6 +19,8 @@ h6 {
   .main-link {
     color: rgb(255, 255, 255);
     font-size: $text-sm;
+    text-transform: uppercase;
+    letter-spacing: em(2);
   }
 }
 
@@ -36,11 +39,11 @@ h6 {
 .movie-title {
   font-size: $text-sm;
   @include mq($tablet) {
-    font-size: $text-xxs;
+    font-size: $text-xs;
   }
 
   @include mq($desktop) {
-    font-size: $text-xxxs;
+    font-size: $text-xxs;
   }
 
   &.single-page {
@@ -68,21 +71,40 @@ h6 {
     .movie-details {
       .movie-title {
         font-size: $text-xxl;
+        animation: neon5 1.2s ease-in-out infinite alternate;
+        @include mq($tablet) {
+          font-size: $text-xl;
+        }
+        @include mq($desktop) {
+          font-size: $text-xl;
+        }
       }
-      .tagline {
+      .overview-title,
+      .heading {
+        font-size: $text-xl;
+        @include mq($tablet) {
+          font-size: $text-lg;
+        }
+        @include mq($desktop) {
+          font-size: $text-md;
+        }
+      }
+      .overview {
+        font-size: $text-sm;
+        @include mq($tablet) {
+          font-size: $text-xs;
+        }
+        @include mq($desktop) {
+          font-size: $text-xxs;
+        }
       }
       .genre-container {
-        font-size: $text-xxs;
+        font-size: $text-xs;
+        @include mq($tablet) {
+          font-size: $text-xxs;
+        }
         @include mq($desktop) {
           font-size: $text-xxxs;
-        }
-      }
-      .third-row {
-        .release-date {
-        }
-        .runtime {
-        }
-        .rating {
         }
       }
     }
@@ -91,7 +113,13 @@ h6 {
 
 .more-details {
   .header {
-    font-size: $text-lg;
+    font-size: $text-xl;
+    @include mq($tablet) {
+      font-size: $text-lg;
+    }
+    @include mq($desktop) {
+      font-size: $text-md;
+    }
   }
   .content {
     font-size: $text-sm;
@@ -120,3 +148,59 @@ h6 {
     }
   }
 }
+
+.about {
+  p {
+    font-size: $text-md;
+    @include mq($tablet) {
+      font-size: $text-sm;
+    }
+    @include mq($desktop) {
+      font-size: $text-xs;
+    }
+  }
+}
+
+footer {
+  p {
+    font-size: $text-sm;
+    @include mq($tablet) {
+      font-size: $text-xxs;
+    }
+    @include mq($desktop) {
+      font-size: $text-xxxs;
+    }
+  }
+}
+
+.neon {
+  text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px rgb(214, 214, 214),
+    0 0 15px rgb(214, 214, 214), 0 0 20px #9615db, 0 0 35px #9615db,
+    0 0 40px #9615db, 0 0 50px #9615db, 0 0 32px #9615db;
+}
+
+@keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #9615db,
+      0 0 70px #9615db, 0 0 80px #9615db, 0 0 100px #9615db, 0 0 150px #9615db;
+  }
+  to {
+    text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px rgb(214, 214, 214),
+      0 0 15px rgb(214, 214, 214), 0 0 20px #9615db, 0 0 35px #9615db,
+      0 0 40px #9615db, 0 0 50px #9615db, 0 0 75px #9615db;
+  }
+}
+
+// @keyframes neon5 {
+//   0%,
+//   100% {
+//     text-shadow: 0 0 1vw #9615db, 0 0 3vw #9615db, 0 0 10vw #9615db,
+//       0 0 10vw #9615db, 0 0 0.4vw #f8eaff, 0vw 0vw 0.1vw #f8eaff;
+//     color: #f8eaff;
+//   }
+//   50% {
+//     text-shadow: 0 0 0.5vw #ab57d8, 0 0 1.5vw #ab57d8, 0 0 5vw #ab57d8,
+//       0 0 5vw #ab57d8, 0 0 0.2vw #ab57d8, 0vw 0vw 0.1vw #4d0c70;
+//     color: #ab57d8;
+//   }
+// }

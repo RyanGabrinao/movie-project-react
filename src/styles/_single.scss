@@ -6,7 +6,7 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
-
+    padding-inline: em(20);
     .backdrop-img {
       position: absolute;
       inset: 0;
@@ -14,7 +14,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center top;
-      filter: brightness(60%) blur(em(3.5));
+      filter: brightness(30%) blur(em(3.5));
       mask-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1),
@@ -27,31 +27,38 @@
     .banner-content {
       width: 100%;
       max-width: em(1000);
-      padding: em(30) em(20);
       margin: 0 auto;
+      padding-top: em(50);
       @include mq($desktop) {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: em(30);
-        padding: em(100) em(50);
+        margin: em(50) auto;
+        padding: em(30) em(50);
+        backdrop-filter: blur(8px) saturate(180%);
+        -webkit-backdrop-filter: blur(8px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.097);
+        border: 1px solid rgba(209, 213, 219, 0.3);
+        border-radius: 12px;
       }
       .movie-poster {
         position: relative;
-        width: fit-content;
         max-width: em(220);
         margin: 0 auto;
         @include mq($desktop) {
+          max-width: em(400);
           margin: unset;
         }
       }
       .movie-details {
         z-index: 0;
         width: fit-content;
-        margin: 0 auto;
+        margin-block: em(20);
+        margin-inline: auto;
         display: flex;
         flex-direction: column;
-        gap: em(8);
+        gap: em(15);
         @include mq($desktop) {
           margin: unset;
         }
@@ -60,7 +67,21 @@
         }
         .movie-title {
           width: fit-content;
+          margin-inline: auto;
+          margin-block: 0;
+          text-align: center;
+          @include mq($desktop) {
+            margin: unset;
+          }
+        }
+        .tagline {
+          font-style: italic;
+          width: fit-content;
+          opacity: 80%;
           margin: 0 auto;
+          @include mq($desktop) {
+            margin: unset;
+          }
         }
         .genre-container {
           margin-block: em(20);

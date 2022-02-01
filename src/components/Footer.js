@@ -3,7 +3,10 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer>&copy; FWDP COPYRIGHT</footer>
+      <footer>
+        <p>&copy; WHAT'S POPPIN all rights reserved.</p>
+        <p>Created by Ryan Gabrinao and Ivan Kam.</p>
+      </footer>
     </>
   );
 }

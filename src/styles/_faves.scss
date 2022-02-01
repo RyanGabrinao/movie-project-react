@@ -1,7 +1,7 @@
 .favorites {
   max-width: em(1440);
   padding-inline: em(20);
-  margin: 0 auto;
+  margin: em(20) auto;
   .movies-container {
     padding-inline: unset;
     .movie-card {

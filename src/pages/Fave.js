@@ -19,7 +19,7 @@ function Fave() {
   return (
     <main>
       <div className="favorites">
-        <h2>Fave</h2>
+        <h2 className="neon">Favorites</h2>
         {likedMovies.length === 0 ? (
           <p>You have no movies in your favourites</p>
         ) : (

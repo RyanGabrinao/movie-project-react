@@ -20,7 +20,7 @@ function Cast({ id }) {
       {cast !== null && (
         <>
           <div className="cast-container">
-            <h2>Cast</h2>
+            <h3 className="header neon">Cast</h3>
             <div className="cast-scroll-container">
               {cast.map((cast, i) => (
                 <CastCard cast={cast} key={i} />

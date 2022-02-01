@@ -6,7 +6,7 @@ function About() {
     <main>
       <div className="about">
         <div className="description">
-          <h4>About the project</h4>
+          <h4 className="neon">About the project</h4>
           <p>
             What's Poppin is a Movie Database listing movies based on
             popularity, rating, and release date. Click into the movies if you
@@ -22,7 +22,12 @@ function About() {
           </div>
           <p>
             This product uses the TMDB API but is not endorsed or certified by{" "}
-            <a href="https://www.themoviedb.org/%22%3ETMDB">ME</a>
+            <a
+              href="https://www.themoviedb.org/"
+              style={{ color: "#9615db", borderBottom: "2px solid #9615db" }}
+            >
+              TMDB
+            </a>
           </p>
           <p>For educational purposes only.</p>
         </div>

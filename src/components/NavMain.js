@@ -17,7 +17,7 @@ function NavMain() {
         </li>
         <li>
           <Link to="/favourites">
-            <span className="main-link">Favorites</span>
+            <span className="main-link">Favourites</span>
           </Link>
         </li>
       </ul>

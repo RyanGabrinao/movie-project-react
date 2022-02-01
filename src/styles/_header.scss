@@ -1,6 +1,15 @@
 header {
-  max-width: em(1440);
   width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   margin-inline: auto;
-  padding-inline: em(20);
+  padding: em(30) em(20);
+  position: fixed;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.501);
+  .header-content {
+    max-width: em(1400);
+    margin: 0 auto;
+  }
 }

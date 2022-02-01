@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function NavSort() {
   const [isSortOpen, setIsSortOpen] = useState(false);
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return (
     <nav className="sort-navigation">
       <div

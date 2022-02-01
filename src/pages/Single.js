@@ -10,7 +10,7 @@ function Single() {
   const { id } = useParams();
   const [movie, setMovie] = useStickyState(null, `movie-${id}`);
   const [isLiked, setIsLiked] = useState(false);
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -26,8 +26,6 @@ function Single() {
       }
     };
     fetchMovie();
-
-    // console.log(movie);
   }, [id, movie, setMovie]);
 
   const onLikeFn = () => {
@@ -39,7 +37,7 @@ function Single() {
   };
 
   return (
-    <main>
+    <main className="single-page-main">
       {movie !== null && (
         <>
           <section className="single-banner">
@@ -51,10 +49,6 @@ function Single() {
             />
           </section>
           <section className="more-details">
-            <div className="overview-container">
-              <h3 className="overview-title header">Overview</h3>
-              <p className="overview content">{movie.overview}</p>
-            </div>
             <Cast id={id} />
           </section>
         </>

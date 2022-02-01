@@ -5,6 +5,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-inline: em(20);
+  // position: relative;
 
   .attributeLogo {
     margin: 0 auto;
@@ -20,7 +22,8 @@
   }
 
   .description {
-    width: 80%;
+    width: 100%;
+    max-width: em(900);
     border: 3px solid #b64dee;
     border-radius: 50px;
     padding: 2rem;
@@ -44,7 +47,7 @@
 
   @include mq($tablet) {
     .attribute {
-      position: absolute;
+      // position: absolute;
       right: 0;
       bottom: 10px;
     }
