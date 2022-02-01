@@ -9,7 +9,7 @@ import "./styles/App.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={APP_FOLDER_NAME}>
       <ScrollToTop>
         <App />
       </ScrollToTop>
